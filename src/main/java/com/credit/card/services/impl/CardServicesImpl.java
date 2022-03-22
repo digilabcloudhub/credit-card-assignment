@@ -38,7 +38,7 @@ public class CardServicesImpl implements CardServices {
 	@Override
 	public CCard add(RequestModel card) {
 		CCard ccard = new CCard();
-		ccard.setBalance(0);
+		ccard.setBalance(new BigDecimal(0));
 		ccard.setCardNumber(card.getCcardNumber());
 		ccard.setName(card.getHolderName());
 		ccard.setLimit(card.getLimit());

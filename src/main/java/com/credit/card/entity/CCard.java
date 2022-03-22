@@ -24,10 +24,10 @@ public class CCard {
 	private String name;
 
 	@Column(name = "balance")
-	private Integer balance;
+	private BigDecimal balance;
 
 	@Column(name = "card_limit")
-	private Integer cardlimit;
+	private BigDecimal cardlimit;
 
 	public Integer getId() {
 		return id;
@@ -53,19 +53,19 @@ public class CCard {
 		this.name = name;
 	}
 
-	public Integer getBalance() {
+	public BigDecimal getBalance() {
 		return balance;
 	}
 
-	public void setBalance(Integer balance) {
+	public void setBalance(BigDecimal balance) {
 		this.balance = balance;
 	}
 
-	public Integer getLimit() {
+	public BigDecimal getLimit() {
 		return cardlimit;
 	}
 
-	public void setLimit(Integer limit) {
+	public void setLimit(BigDecimal limit) {
 		this.cardlimit = limit;
 	}
 

@@ -40,7 +40,7 @@ public class CardController {
 			response.setMessage("Success");
 			return new ResponseEntity<>(response, HttpStatus.OK);
 		} else {
-			throw new ResourceNotFoundException();
+			throw new ResourceNotFoundException("No Record Found");
 		}
 
 	}
@@ -49,7 +49,6 @@ public class CardController {
 	@PostMapping("/card")
 	public ResponseEntity<ResponseModel> addCard(@RequestBody RequestModel request) throws InavlidRequestException {
 
-		
 		Boolean isValid = cardService.isValid(request.getCcardNumber());
 
 		if (isValid) {
@@ -61,11 +60,11 @@ public class CardController {
 				response.setMessage("Success");
 				return new ResponseEntity<>(response, HttpStatus.CREATED);
 			} else {
-				throw new InavlidRequestException();
+				throw new InavlidRequestException("Not Able to add card.Try after sometime.");
 			}
 
 		} else {
-			throw new InavlidRequestException();
+			throw new InavlidRequestException("Card number is invalid .Please enter correct number");
 		}
 
 	}

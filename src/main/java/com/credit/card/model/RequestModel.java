@@ -12,9 +12,9 @@ public class RequestModel {
 	@JsonProperty("holderName")
 	private String holderName;
 	@JsonProperty("cardlimit")
-	private Integer cardlimit;
+	private BigDecimal cardlimit;
 	@JsonProperty("balance")
-	private Integer balance;
+	private BigDecimal balance;
 	
 	@JsonProperty("ccardNumber")
 	@NotNull
@@ -29,19 +29,19 @@ public class RequestModel {
 		this.holderName = holderName;
 	}
 
-	public Integer getLimit() {
+	public BigDecimal getLimit() {
 		return cardlimit;
 	}
 
-	public void setLimit(Integer limit) {
+	public void setLimit(BigDecimal limit) {
 		this.cardlimit = limit;
 	}
 
-	public Integer getBalance() {
+	public BigDecimal getBalance() {
 		return balance;
 	}
 
-	public void setBalance(Integer balance) {
+	public void setBalance(BigDecimal balance) {
 		this.balance = balance;
 	}
 
