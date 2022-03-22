@@ -19,7 +19,7 @@ public class CardServicesImpl implements CardServices {
 
 	@Override
 	public boolean isValid(String number) {
-		System.out.println(number);
+
 		if (number.chars().allMatch(Character::isDigit)) {
 			if (isLuhnCompliant(number)) {
 				return true;
