@@ -49,8 +49,7 @@ public class CardController {
 	@PostMapping("/card")
 	public ResponseEntity<ResponseModel> addCard(@RequestBody RequestModel request) throws InavlidRequestException {
 
-		System.out.println("In controller"+request.getCcardNumber());
-		System.out.println("In controller"+request.getHolderName());
+		
 		Boolean isValid = cardService.isValid(request.getCcardNumber());
 
 		if (isValid) {
