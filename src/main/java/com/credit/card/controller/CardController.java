@@ -24,8 +24,12 @@ import com.credit.card.services.CardServices;
 @RestController
 public class CardController {
 
-	@Autowired
-	private CardServices cardService;
+	
+	private final CardServices cardService;
+	
+	 public CardController(CardServices cardService) {
+		this.cardService=cardService;
+	}
 
 	@CrossOrigin
 	@GetMapping("/cards")
